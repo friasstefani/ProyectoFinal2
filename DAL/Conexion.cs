@@ -7,16 +7,15 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace DAL {
-    public class Conexion {
-
+    public class Conexion { 
 
         public DataSet ds = new DataSet();
         public SqlDataAdapter da = new SqlDataAdapter();
         public SqlCommandBuilder cmd = new SqlCommandBuilder();
 
         public static SqlConnection con = new SqlConnection("Data Source=SQL5007.Smarterasp.net;Initial Catalog=DB_9CF3ED_ProdDominicanos;User Id=DB_9CF3ED_ProdDominicanos_admin;Password=ProdDominicanos123;");
-       
-        //public static SqlConnection con = new SqlConnection(@"Data Source=STEFANI-PC;Initial Catalog=LETTUCE;Integrated Security=True");
+
+        //public static SqlConnection con = new SqlConnection(@"Data Source=SERVIDOR\SQLEXPRESS;Initial Catalog=LETTUCE;Integrated Security=True");
        
 
         public bool EjecutarDB(string Codigo) {

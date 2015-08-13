@@ -632,7 +632,6 @@
     <Content Include="Login.aspx" />
     <Content Include="PanelAdministrativo\cArticulosVendidos.aspx" />
     <Content Include="PanelAdministrativo\cClientes.aspx" />
-    <Content Include="PanelAdministrativo\cMedidas.aspx" />
     <Content Include="PanelAdministrativo\cPedidoDetalle.aspx" />
     <Content Include="PanelAdministrativo\cPedidos.aspx" />
     <Content Include="PanelAdministrativo\cProductores.aspx" />
@@ -646,6 +645,7 @@
     <Content Include="PedidoRealizado.aspx" />
     <Content Include="rPedidos.aspx" />
     <Content Include="Site.Master" />
+    <None Include="Properties\PublishProfiles\stefani2.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -721,13 +721,6 @@
     </Compile>
     <Compile Include="PanelAdministrativo\cClientes.aspx.designer.cs">
       <DependentUpon>cClientes.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PanelAdministrativo\cMedidas.aspx.cs">
-      <DependentUpon>cMedidas.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PanelAdministrativo\cMedidas.aspx.designer.cs">
-      <DependentUpon>cMedidas.aspx</DependentUpon>
     </Compile>
     <Compile Include="PanelAdministrativo\cPedidoDetalle.aspx.cs">
       <DependentUpon>cPedidoDetalle.aspx</DependentUpon>

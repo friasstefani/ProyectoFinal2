@@ -39,6 +39,7 @@ namespace ConectandoProductores.PanelAdministrativo {
         protected void guardarButton_Click(object sender, EventArgs e) {
             Productos productos = new Productos();
             string imagen;
+            int id = 0;
 
             productos.Nombre = NombreTextBox.Text;
             productos.Descripcion = DescripcionTextBox.Text;
@@ -52,24 +53,38 @@ namespace ConectandoProductores.PanelAdministrativo {
             usuario.BuscarPorNombre(User.Identity.Name);
             productos.IdProductor = Productores.getIdProductorPorIdUsuario(usuario.IdUsuario);
 
-            if (productos.Insertar()) {
-                if (ImagenProductoFileUpload.HasFile) {
-                    string directory = Server.MapPath("~/ImagenesSubidas/"); //Convierte la ruta virtual a la ruta fisica del servidor..
-                    var fileName = Path.GetFileName(ImagenProductoFileUpload.FileName);
-                    ImagenProductoFileUpload.SaveAs(Path.Combine(directory, imagen));
-                    MensajeLabel.Text = "Información Guardada Correctamente";
-                }
+            if (Request.QueryString["Id"] != null) {
+                int.TryParse(Request.QueryString["Id"], out id);
+            }
+
+            if (id == 0) {
+                productos.Insertar();
+            } else {
+                productos.Modificar(id);
+            }
+
+            if (ImagenProductoFileUpload.HasFile) {
+                string directory = Server.MapPath("~/ImagenesSubidas/"); //Convierte la ruta virtual a la ruta fisica del servidor..
+                var fileName = Path.GetFileName(ImagenProductoFileUpload.FileName);
+                ImagenProductoFileUpload.SaveAs(Path.Combine(directory, imagen));
+                MensajeLabel.Text = "Información Guardada Correctamente";
+                NombreTextBox.Text = "";
+                DescripcionTextBox.Text = "";
+                PrecioTextBox.Text = "";
+                IdProductoTextBox.Text = "";
             }
         }
 
         protected void eliminarButton_Click(object sender, EventArgs e) {
-            if (Request.QueryString["Tipo"] != null) {
-                Productos Producto = new Productos();
-                int codigo = 0;
-                int.TryParse(IdProductoTextBox.Text, out codigo);
-                if (Producto.Eliminar(codigo)) {
-                    MensajeLabel.Text = "Eliminado correctamente";
-                }
+            Productos Producto = new Productos();
+            int codigo = 0;
+            int.TryParse(IdProductoTextBox.Text, out codigo);
+            if (Producto.Eliminar(codigo)) {
+                MensajeLabel.Text = "Eliminado correctamente";
+                NombreTextBox.Text = "";
+                DescripcionTextBox.Text = "";
+                PrecioTextBox.Text = "";
+                IdProductoTextBox.Text = "";
             }
         }
 

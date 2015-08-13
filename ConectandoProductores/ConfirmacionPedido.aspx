@@ -79,7 +79,7 @@
                 <div class="form-group">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="icon_key_alt"></i></span>
-                        <asp:TextBox ID="ClaveTextBox" CssClass="form-control" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="ClaveTextBox" TextMode="Password" CssClass="form-control" runat="server"></asp:TextBox>
                     </div>
                 </div>
 

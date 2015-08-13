@@ -117,6 +117,17 @@ namespace ConectandoProductores.PanelAdministrativo
                             if (c.Insertar())
                             {
                                 LabelMesaage.Text = "Guardado correctamente";
+                                IdTextBox.Text = "";
+                                NombresTextBox.Text = "";
+                                ApellidoTextBox.Text = "";
+                                cedulaTextBox.Text = "";
+                                telefonoTextBox.Text = "";
+                                celularTextBox.Text = "";
+                                DireccionTextBox.Text = "";
+                                EmailTextBox.Text = "";
+                                NombreUsuarioTextBox.Text = "";
+                                ContrasenaTextBox.Text = "";
+
                             }
                         }
                         else
@@ -148,6 +159,17 @@ namespace ConectandoProductores.PanelAdministrativo
                             if (p.Insertar())
                             {
                                 LabelMesaage.Text = "Guardado correctamente";
+
+                                IdTextBox.Text = "";
+                                NombresTextBox.Text = "";
+                                ApellidoTextBox.Text = "";
+                                cedulaTextBox.Text = "";
+                                telefonoTextBox.Text = "";
+                                celularTextBox.Text = "";
+                                DireccionTextBox.Text = "";
+                                EmailTextBox.Text = "";
+                                NombreUsuarioTextBox.Text = "";
+                                ContrasenaTextBox.Text = "";
                             }
                         }
                         else
