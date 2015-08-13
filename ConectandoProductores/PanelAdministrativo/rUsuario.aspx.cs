@@ -200,6 +200,16 @@ namespace ConectandoProductores.PanelAdministrativo
                         if (c.Eliminar(codigo))
                         {
                             LabelMesaage.Text = "Eliminado correctamente";
+                            IdTextBox.Text = "";
+                            NombresTextBox.Text = "";
+                            ApellidoTextBox.Text = "";
+                            cedulaTextBox.Text = "";
+                            telefonoTextBox.Text = "";
+                            celularTextBox.Text = "";
+                            DireccionTextBox.Text = "";
+                            EmailTextBox.Text = "";
+                            NombreUsuarioTextBox.Text = "";
+                            ContrasenaTextBox.Text = "";
                         }
 
                         break;
@@ -212,6 +222,16 @@ namespace ConectandoProductores.PanelAdministrativo
                         if (p.Eliminar(clave))
                         {
                             LabelMesaage.Text = "Eliminado correctamente";
+                            IdTextBox.Text = "";
+                            NombresTextBox.Text = "";
+                            ApellidoTextBox.Text = "";
+                            cedulaTextBox.Text = "";
+                            telefonoTextBox.Text = "";
+                            celularTextBox.Text = "";
+                            DireccionTextBox.Text = "";
+                            EmailTextBox.Text = "";
+                            NombreUsuarioTextBox.Text = "";
+                            ContrasenaTextBox.Text = "";
                         }
                         break;
                     default:

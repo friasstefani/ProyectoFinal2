@@ -59,6 +59,10 @@ namespace ConectandoProductores.PanelAdministrativo {
 
             if (id == 0) {
                 productos.Insertar();
+                NombreTextBox.Text = "";
+                DescripcionTextBox.Text = "";
+                PrecioTextBox.Text = "";
+                IdProductoTextBox.Text = "";
             } else {
                 productos.Modificar(id);
             }
@@ -67,11 +71,8 @@ namespace ConectandoProductores.PanelAdministrativo {
                 string directory = Server.MapPath("~/ImagenesSubidas/"); //Convierte la ruta virtual a la ruta fisica del servidor..
                 var fileName = Path.GetFileName(ImagenProductoFileUpload.FileName);
                 ImagenProductoFileUpload.SaveAs(Path.Combine(directory, imagen));
-                MensajeLabel.Text = "Información Guardada Correctamente";
-                NombreTextBox.Text = "";
-                DescripcionTextBox.Text = "";
-                PrecioTextBox.Text = "";
-                IdProductoTextBox.Text = "";
+               MensajeLabel.Text = "Información Guardada Correctamente";
+              
             }
         }
 
