@@ -644,6 +644,7 @@
     <Content Include="PanelAdministrativo\rUsuario.aspx" />
     <Content Include="PedidoRealizado.aspx" />
     <Content Include="rPedidos.aspx" />
+    <Content Include="Script  Letucce.sql" />
     <Content Include="Site.Master" />
     <None Include="Properties\PublishProfiles\stefani2.pubxml" />
     <None Include="Web.Debug.config">
